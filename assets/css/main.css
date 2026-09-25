@@ -459,8 +459,8 @@ p {
    HERO SECTION
    -------------------------------------------------------------------------- */
 .hero {
-  padding: 4.5rem 0 5.5rem 0;
-  background: radial-gradient(circle at 80% 20%, rgba(221, 231, 221, 0.45) 0%, rgba(247, 244, 238, 0) 65%);
+  padding: 5.5rem 0 6rem 0;
+  background: radial-gradient(circle at 50% 20%, rgba(221, 231, 221, 0.45) 0%, rgba(247, 244, 238, 0) 70%);
   overflow: hidden;
 }
 
@@ -473,6 +473,12 @@ p {
 
 .hero-content {
   max-width: 580px;
+}
+
+.hero-content-centered {
+  max-width: 840px;
+  margin: 0 auto;
+  text-align: center;
 }
 
 .hero-title {
@@ -491,6 +497,10 @@ p {
   margin-bottom: 2.5rem;
 }
 
+.hero-actions-centered {
+  justify-content: center;
+}
+
 .hero-trust-bar {
   display: flex;
   flex-wrap: wrap;
@@ -498,6 +508,12 @@ p {
   gap: 1.75rem;
   padding-top: 1.75rem;
   border-top: 1px solid var(--border-subtle);
+}
+
+.hero-trust-bar-centered {
+  justify-content: center;
+  max-width: 620px;
+  margin: 0 auto;
 }
 
 .trust-item {

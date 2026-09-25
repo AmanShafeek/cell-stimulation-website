@@ -267,7 +267,6 @@ const EXPERIENCE_DATA = [
 function initExperienceTabs() {
   const tabButtons = document.querySelectorAll('.exp-tab-button');
   const previewCard = document.querySelector('.exp-screen-card');
-  const heroPhoneScreen = document.querySelector('#hero-interactive-screen');
 
   if (!tabButtons.length || !previewCard) return;
 
@@ -307,15 +306,6 @@ function initExperienceTabs() {
         `;
         previewCard.style.opacity = '1';
       }, 150);
-
-      // If interactive screen exists on page, update it too
-      if (heroPhoneScreen) {
-        heroPhoneScreen.style.opacity = '0';
-        setTimeout(() => {
-          heroPhoneScreen.innerHTML = data.phoneContent;
-          heroPhoneScreen.style.opacity = '1';
-        }, 150);
-      }
     });
   });
 }
