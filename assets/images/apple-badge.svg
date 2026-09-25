@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 48" fill="none">
+  <rect width="160" height="48" rx="10" fill="#17231D"/>
+  <rect x="0.5" y="0.5" width="159" height="47" rx="9.5" stroke="#37483E" stroke-opacity="0.6"/>
+  <!-- Apple Logo -->
+  <path d="M34.8 24.3c-.03-3.3 2.7-4.9 2.82-5-.02-.08-1.54-1.75-3.8-1.75-1.6 0-3.13 1-3.95 1-.84 0-2.1-.98-3.45-.98-1.78 0-3.43 1.05-4.34 2.67-1.87 3.23-.48 8 1.33 10.63.89 1.28 1.94 2.72 3.32 2.67 1.34-.05 1.85-.86 3.47-.86 1.61 0 2.08.86 3.48.83 1.44-.02 2.34-1.3 3.21-2.59 1.02-1.48 1.43-2.92 1.45-3-.03-.02-2.77-1.07-2.8-4.23z" fill="#FFFFFF"/>
+  <path d="M31.7 15.6c.72-.88 1.21-2.1 1.08-3.33-1.04.04-2.31.7-3.05 1.57-.65.76-1.22 1.99-1.07 3.19 1.16.09 2.34-.61 3.04-1.43z" fill="#FFFFFF"/>
+  <!-- Text -->
+  <text x="49" y="18" fill="#DDE7DD" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="8.5" letter-spacing="0.4" font-weight="500">Download on the</text>
+  <text x="49" y="32" fill="#FFFFFF" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="14.5" font-weight="600" letter-spacing="-0.3">App Store</text>
+</svg>
