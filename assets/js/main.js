@@ -7,8 +7,8 @@
 // Global Configuration Variables (Easily customizable for production)
 const APP_CONFIG = {
   appName: 'Cell Stimulation',
-  supportEmail: 'support@cellstimulation.com', // Placeholder configuration variable
-  appStoreUrl: '#app-download',               // Update with live App Store URL when published
+  supportEmail: 'support@apporithm.tech',
+  appStoreUrl: '#app-download',
   copyrightYear: 2026
 };
 

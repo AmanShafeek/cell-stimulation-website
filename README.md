@@ -103,14 +103,14 @@ All global settings and placeholders are centralized in [`assets/js/main.js`](as
 ```javascript
 const APP_CONFIG = {
   appName: 'Cell Stimulation',
-  supportEmail: 'support@cellstimulation.com', // Replace with your support inbox
-  appStoreUrl: '#app-download',               // Replace with live App Store URL when published
+  supportEmail: 'support@apporithm.tech',
+  appStoreUrl: '#app-download',
   copyrightYear: 2026
 };
 ```
 
 ### Placeholders in HTML files:
-- `support@cellstimulation.com` or `[SUPPORT EMAIL]`
+- `support@apporithm.tech`
 - `[COMPANY NAME]` (in `privacy-policy/index.html` and `terms/index.html`)
 - `[LEGAL ADDRESS]` (in `privacy-policy/index.html` and `terms/index.html`)
 
