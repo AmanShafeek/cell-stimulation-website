@@ -66,17 +66,17 @@ This project is built using pure, standard, framework-free semantic HTML5, moder
      - Source: **Deploy from a branch**
      - Branch: **main** / folder: **/ (root)**
    - Click **Save**.
-4. Within 1–2 minutes, your site will be live at:
-   - **Home:** `https://YOUR-USERNAME.github.io/cell-stimulation-website/`
-   - **Support URL:** `https://YOUR-USERNAME.github.io/cell-stimulation-website/support/`
-   - **Privacy Policy URL:** `https://YOUR-USERNAME.github.io/cell-stimulation-website/privacy-policy/`
-   - **About:** `https://YOUR-USERNAME.github.io/cell-stimulation-website/about/`
-   - **Terms:** `https://YOUR-USERNAME.github.io/cell-stimulation-website/terms/`
+4. Your site is live at:
+   - **Home:** `https://amanshafeek.github.io/cell-stimulation-website/`
+   - **Support URL:** `https://amanshafeek.github.io/cell-stimulation-website/support/`
+   - **Privacy Policy URL:** `https://amanshafeek.github.io/cell-stimulation-website/privacy-policy/`
+   - **About:** `https://amanshafeek.github.io/cell-stimulation-website/about/`
+   - **Terms:** `https://amanshafeek.github.io/cell-stimulation-website/terms/`
 
 ### Option B: Custom Domain (e.g., `https://cellstimulation.com`)
 
 1. Add your custom domain under **Settings > Pages > Custom domain**.
-2. Add a `CNAME` record in your DNS provider pointing to `YOUR-USERNAME.github.io`.
+2. Add a `CNAME` record in your DNS provider pointing to `amanshafeek.github.io`.
 3. Check **Enforce HTTPS**.
 4. The URLs will map directly to:
    - Support: `https://cellstimulation.com/support/`
@@ -90,9 +90,9 @@ When filling in your app information in **App Store Connect**:
 
 | App Store Connect Field | Target URL |
 | :--- | :--- |
-| **Support URL** *(Required)* | `https://YOUR-USERNAME.github.io/cell-stimulation-website/support/` |
-| **Privacy Policy URL** *(Required)* | `https://YOUR-USERNAME.github.io/cell-stimulation-website/privacy-policy/` |
-| **Marketing URL** *(Optional)* | `https://YOUR-USERNAME.github.io/cell-stimulation-website/` |
+| **Support URL** *(Required)* | `https://amanshafeek.github.io/cell-stimulation-website/support/` |
+| **Privacy Policy URL** *(Required)* | `https://amanshafeek.github.io/cell-stimulation-website/privacy-policy/` |
+| **Marketing URL** *(Optional)* | `https://amanshafeek.github.io/cell-stimulation-website/` |
 
 ---
 
