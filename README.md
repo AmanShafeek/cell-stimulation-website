@@ -26,6 +26,8 @@ cell-stimulation-website/
 │   └── index.html               # Apple App Store Support Page (FAQ, Contact)
 ├── privacy-policy/
 │   └── index.html               # Apple App Store Privacy Policy (20 Sections)
+├── copyright/
+│   └── index.html               # Apple App Store Copyright Notice & IP Terms
 ├── terms/
 │   └── index.html               # Terms of Use
 ├── 404.html                     # Custom 404 Not Found Page
@@ -70,6 +72,7 @@ This project is built using pure, standard, framework-free semantic HTML5, moder
    - **Home:** `https://amanshafeek.github.io/cell-stimulation-website/`
    - **Support URL:** `https://amanshafeek.github.io/cell-stimulation-website/support/`
    - **Privacy Policy URL:** `https://amanshafeek.github.io/cell-stimulation-website/privacy-policy/`
+   - **Copyright Notice URL:** `https://amanshafeek.github.io/cell-stimulation-website/copyright/`
    - **About:** `https://amanshafeek.github.io/cell-stimulation-website/about/`
    - **Terms:** `https://amanshafeek.github.io/cell-stimulation-website/terms/`
 
@@ -81,18 +84,24 @@ This project is built using pure, standard, framework-free semantic HTML5, moder
 4. The URLs will map directly to:
    - Support: `https://cellstimulation.com/support/`
    - Privacy Policy: `https://cellstimulation.com/privacy-policy/`
+   - Copyright: `https://cellstimulation.com/copyright/`
 
 ---
 
-## 🍎 Apple App Store Submission URLs
+## 🍎 Apple App Store Submission Metadata & URLs
 
-When filling in your app information in **App Store Connect**:
+When filling in your app information in **App Store Connect** (under **General Information**):
 
-| App Store Connect Field | Target URL |
-| :--- | :--- |
-| **Support URL** *(Required)* | `https://amanshafeek.github.io/cell-stimulation-website/support/` |
-| **Privacy Policy URL** *(Required)* | `https://amanshafeek.github.io/cell-stimulation-website/privacy-policy/` |
-| **Marketing URL** *(Optional)* | `https://amanshafeek.github.io/cell-stimulation-website/` |
+| App Store Connect Field | Value / Target URL | Apple Official Specification & Guidelines |
+| :--- | :--- | :--- |
+| **Copyright** *(Required)* | `2026 Cell Stimulation` | *"The name of the person or entity that owns the exclusive rights to your app, preceded by the year the rights were obtained (for example, "2008 Acme Inc."). Do not provide a URL."* |
+| **Support URL** *(Required)* | `https://amanshafeek.github.io/cell-stimulation-website/support/` | *"A URL with support information for your app. This appears on your app’s product page once you release your app on the App Store."* |
+| **Privacy Policy URL** *(Required)* | `https://amanshafeek.github.io/cell-stimulation-website/privacy-policy/` | Required for all apps. Must detail data handling, coach messaging, and account deletion. |
+| **Marketing URL** *(Optional)* | `https://amanshafeek.github.io/cell-stimulation-website/` | Public webpage where prospective members can learn more about the app. |
+
+> ⚠️ **Important App Store Connect Submission Rules:**
+> - **Copyright Field:** Preceded by the year (`2026`), followed by the exclusive rights holder (`Cell Stimulation`). **Do not provide a URL** in this field!
+> - **Support URL Field:** Must link to a live page providing direct contact info (`support@apporithm.tech`), FAQs, and verifiable account deletion instructions without requiring a login or account.
 
 ---
 
@@ -105,7 +114,9 @@ const APP_CONFIG = {
   appName: 'Cell Stimulation',
   supportEmail: 'support@apporithm.tech',
   appStoreUrl: '#app-download',
-  copyrightYear: 2026
+  copyrightYear: 2026,
+  copyrightNotice: '2026 Cell Stimulation',
+  supportUrl: 'https://amanshafeek.github.io/cell-stimulation-website/support/'
 };
 ```
 

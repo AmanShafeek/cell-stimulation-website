@@ -9,7 +9,9 @@ const APP_CONFIG = {
   appName: 'Cell Stimulation',
   supportEmail: 'support@apporithm.tech',
   appStoreUrl: '#app-download',
-  copyrightYear: 2026
+  copyrightYear: 2026,
+  copyrightNotice: '2026 Cell Stimulation',
+  supportUrl: 'https://amanshafeek.github.io/cell-stimulation-website/support/'
 };
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -394,24 +396,48 @@ Date: ${new Date().toLocaleDateString()}
  * Copy to Clipboard Helper
  */
 function initCopyButtons() {
-  const copyBtns = document.querySelectorAll('.copy-email-btn');
+  const copyBtns = document.querySelectorAll('.copy-email-btn, .copy-btn, .spec-copy-btn');
   copyBtns.forEach(btn => {
     btn.addEventListener('click', () => {
-      const email = btn.getAttribute('data-email') || APP_CONFIG.supportEmail;
-      navigator.clipboard.writeText(email).then(() => {
-        const originalText = btn.innerHTML;
-        btn.innerHTML = `
-          <svg style="width:16px;height:16px;" viewBox="0 0 20 20" fill="currentColor">
-            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
-          </svg>
-          Copied!
-        `;
-        setTimeout(() => {
-          btn.innerHTML = originalText;
-        }, 2200);
+      const textToCopy = btn.getAttribute('data-copy-text') || btn.getAttribute('data-email') || APP_CONFIG.supportEmail;
+      if (!navigator.clipboard) {
+        // Fallback for older browsers
+        const textarea = document.createElement('textarea');
+        textarea.value = textToCopy;
+        document.body.appendChild(textarea);
+        textarea.select();
+        try {
+          document.execCommand('copy');
+          displayCopiedState(btn);
+        } catch (e) {
+          console.error('Fallback copy failed', e);
+        }
+        document.body.removeChild(textarea);
+        return;
+      }
+
+      navigator.clipboard.writeText(textToCopy).then(() => {
+        displayCopiedState(btn);
+      }).catch(err => {
+        console.error('Failed to copy: ', err);
       });
     });
   });
+}
+
+function displayCopiedState(btn) {
+  const originalHtml = btn.innerHTML;
+  btn.innerHTML = `
+    <svg style="width:16px;height:16px;" viewBox="0 0 20 20" fill="currentColor">
+      <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+    </svg>
+    Copied!
+  `;
+  btn.classList.add('copied');
+  setTimeout(() => {
+    btn.innerHTML = originalHtml;
+    btn.classList.remove('copied');
+  }, 2200);
 }
 
 /**
@@ -458,5 +484,18 @@ function updateConfigPlaceholders() {
   emailLinks.forEach(link => {
     link.href = `mailto:${APP_CONFIG.supportEmail}`;
     link.textContent = APP_CONFIG.supportEmail;
+  });
+
+  // Update dynamic copyright notice text
+  const copyrightNoticeElements = document.querySelectorAll('.app-copyright-notice');
+  copyrightNoticeElements.forEach(el => {
+    el.textContent = APP_CONFIG.copyrightNotice;
+  });
+
+  // Update dynamic support url text
+  const supportUrlElements = document.querySelectorAll('.app-support-url');
+  supportUrlElements.forEach(el => {
+    el.textContent = APP_CONFIG.supportUrl;
+    if (el.tagName === 'A') el.href = APP_CONFIG.supportUrl;
   });
 }

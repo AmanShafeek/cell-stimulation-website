@@ -1708,6 +1708,168 @@ p {
 }
 
 /* --------------------------------------------------------------------------
+   APPLE APP STORE SUBMISSION SPECIFICATION CARDS
+   -------------------------------------------------------------------------- */
+.appstore-spec-card {
+  background: var(--white);
+  border: 1px solid var(--border-sage);
+  border-radius: var(--radius-lg);
+  padding: 1.75rem 2rem;
+  margin: 2rem 0;
+  box-shadow: var(--shadow-sm);
+  position: relative;
+  overflow: hidden;
+}
+
+.appstore-spec-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--sage), var(--primary-dark));
+}
+
+.spec-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 1.25rem;
+}
+
+.spec-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 0.35rem 0.85rem;
+  background: var(--soft-sage-subtle);
+  color: var(--sage-dark);
+  border-radius: var(--radius-full);
+  border: 1px solid var(--soft-sage);
+}
+
+.spec-badge-apple {
+  background: #000000;
+  color: #FFFFFF;
+  border-color: #000000;
+}
+
+.spec-badge-apple svg {
+  width: 14px;
+  height: 14px;
+  fill: currentColor;
+}
+
+.spec-official-quote {
+  background: var(--surface-subtle);
+  border-left: 3px solid var(--sage);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  padding: 0.85rem 1.15rem;
+  margin-bottom: 1.5rem;
+  font-size: 0.92rem;
+  color: var(--text-secondary);
+  font-style: italic;
+  line-height: 1.55;
+}
+
+.spec-official-quote strong {
+  color: var(--primary-dark);
+  font-style: normal;
+}
+
+.spec-field-label {
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-muted);
+  margin-bottom: 0.5rem;
+}
+
+.spec-code-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  background: var(--primary-dark);
+  color: #FFFFFF;
+  padding: 1rem 1.25rem;
+  border-radius: var(--radius-md);
+  margin-bottom: 1.25rem;
+  flex-wrap: wrap;
+}
+
+.spec-code-text {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 1.05rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: #E2EDE3;
+  word-break: break-all;
+}
+
+.spec-copy-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  background: var(--sage);
+  color: #FFFFFF;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  white-space: nowrap;
+}
+
+.spec-copy-btn:hover {
+  background: var(--sage-hover);
+  transform: translateY(-1px);
+}
+
+.spec-copy-btn.copied {
+  background: #2E7D32;
+}
+
+.spec-dos-donts {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-top: 1.25rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--border-subtle);
+}
+
+.spec-rule-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  font-size: 0.88rem;
+  line-height: 1.45;
+}
+
+.spec-icon-pass {
+  color: #2E7D32;
+  font-weight: 800;
+  flex-shrink: 0;
+}
+
+.spec-icon-fail {
+  color: #C62828;
+  font-weight: 800;
+  flex-shrink: 0;
+}
+
+/* --------------------------------------------------------------------------
    PRIVACY POLICY & LEGAL PAGES (App Store Required 20 Sections)
    -------------------------------------------------------------------------- */
 .legal-layout {
@@ -1989,5 +2151,9 @@ p {
   .footer-bottom {
     flex-direction: column;
     text-align: center;
+  }
+  
+  .spec-dos-donts {
+    grid-template-columns: 1fr;
   }
 }
